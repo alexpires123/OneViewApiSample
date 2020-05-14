@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OneviewApiSample</string>
+    <string name="action_settings">Settings</string>
+    <string name="wifi_setting_enable_wifi">Wi-Fi</string>
+    <string name="wifi_setting_available_networks">Available networks</string>
+    <string name="wifi_setting_other_options_add_network">"Add new network "</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
