@@ -6,12 +6,6 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     signingConfigs {
-        system {
-            keyAlias 'platform'
-            storeFile file('keys/wetek.keystore')
-            keyPassword 'android'
-            storePassword 'android'
-        }
 
         oneview {
             keyAlias 'android'
@@ -20,12 +14,6 @@ android {
             storePassword 'android'
         }
 
-        coolzone {
-            keyAlias 'coolzone'
-            storeFile file('keys/coolzone_android.jks')
-            keyPassword '1234567'
-            storePassword '1234567'
-        }
     }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -39,12 +27,10 @@ android {
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.system
-            //   signingConfig signingConfigs.oneview
+            signingConfig signingConfigs.oneview
         }
         release {
-            signingConfig signingConfigs.system
-            //      signingConfig signingConfigs.oneview
+            signingConfig signingConfigs.oneview
             minifyEnabled false
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
