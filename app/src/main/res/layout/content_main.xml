@@ -1,94 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
-    android:gravity="center"
-    tools:showIn="@layout/activity_main"
-    android:orientation="vertical">
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <Button
-        android:id="@+id/clearDataBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clear App Data"
-        android:focusable="true"
-        />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        android:gravity="center"
+        tools:showIn="@layout/activity_main"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/closeAllRunningAppsBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Close All Running Apps"
-        android:focusable="true"
-        />
+        <Button
+            android:id="@+id/clearDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear App Data"
+            android:focusable="true"
+            />
 
-    <Button
-        android:id="@+id/changeTimezoneBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change Timezone"
-        android:focusable="true"
-        />
+        <Button
+            android:id="@+id/closeAllRunningAppsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close All Running Apps"
+            android:focusable="true"
+            />
 
-    <Button
-        android:id="@+id/clearClipboardBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clear Clipboard"
-        android:focusable="true"
-        />
+        <Button
+            android:id="@+id/changeTimezoneBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Timezone"
+            android:focusable="true"
+            />
 
-    <Button
-        android:id="@+id/showLogcatBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Logcat"
-        android:focusable="true"
-        />
+        <Button
+            android:id="@+id/clearClipboardBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Clipboard"
+            android:focusable="true"
+            />
 
-    <Button
-        android:id="@+id/deleteFilesBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete Files"
-        android:focusable="true"
-        />
+        <Button
+            android:id="@+id/showLogcatBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Logcat"
+            android:focusable="true"
+            />
 
-    <Button
-        android:id="@+id/installApkBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Install Apk"
-        android:focusable="true"
-        />
+        <Button
+            android:id="@+id/deleteFilesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Files"
+            android:focusable="true"
+            />
 
-    <Button
-        android:id="@+id/getDeviceNameBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get device name"
-        android:focusable="true"
-        />
+        <Button
+            android:id="@+id/installApkBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Install Apk"
+            android:focusable="true"
+            />
 
-    <Button
-        android:id="@+id/setDeviceNameBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Set device name"
-        android:focusable="true"
-        />
+        <Button
+            android:id="@+id/getDeviceNameBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get device name"
+            android:focusable="true"
+            />
 
-    <Button
-        android:id="@+id/setAutoTimeOff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change screen auto turn off timeou"
-        android:focusable="true"
-        />
+        <Button
+            android:id="@+id/setDeviceNameBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set device name"
+            android:focusable="true"
+            />
+
+        <Button
+            android:id="@+id/setAutoTimeOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change screen auto turn off timeou"
+            android:focusable="true"
+            />
+
+        <Button
+            android:id="@+id/btSendKeyboardEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send keyboard events: example KEYCODE_HOME"
+            android:focusable="true"
+            />
 
 
-</LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

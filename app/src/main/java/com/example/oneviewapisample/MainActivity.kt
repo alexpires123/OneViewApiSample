@@ -20,6 +20,7 @@ import android.os.Bundle
 import android.provider.Settings
 import android.text.InputType
 import android.util.Log
+import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
@@ -64,6 +65,7 @@ class MainActivity : AppCompatActivity() {
         getDeviceNameBtn.setOnClickListener { showDeviceName() }
         setDeviceNameBtn.setOnClickListener { showSetDeviceNameDialog() }
         setAutoTimeOff.setOnClickListener { showSetAutoTimeOff() }
+        btSendKeyboardEvents.setOnClickListener { executeKeyEvent(KeyEvent.KEYCODE_HOME, true) }
 
     }
 
@@ -83,6 +85,27 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+
+    @RequiresApi(Build.VERSION_CODES.M)
+    fun executeKeyEvent(keyCode: Int, isLongPress: Boolean)  {
+
+        val commandToRun = StringBuilder("input keyevent ")
+        if (isLongPress) {
+            commandToRun.append("--longpress ")
+        }
+        commandToRun.append(keyCode)
+
+        Log.i("Test", "command: "+commandToRun)
+        try {
+
+            Runtime.getRuntime().exec(commandToRun.toString())
+        } catch (e: IOException) {
+            e.printStackTrace()
+
+        }
+
     }
 
 

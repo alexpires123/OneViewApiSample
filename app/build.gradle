@@ -7,6 +7,14 @@ apply plugin: 'kotlin-android-extensions'
 android {
     signingConfigs {
 
+        system {
+            keyAlias 'platform'
+            storeFile file('keys/wetek.keystore')
+            keyPassword 'android'
+            storePassword 'android'
+        }
+
+
         oneview {
             keyAlias 'android'
             storeFile file('keys/platform.jks')
