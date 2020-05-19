@@ -106,6 +106,15 @@
             />
 
 
+        <Button
+            android:id="@+id/btConfigureWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configure Wi-fi"
+            android:focusable="true"
+            />
+
+
     </LinearLayout>
 
 

@@ -26,6 +26,7 @@ import android.view.MenuItem
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.example.oneviewapisample.wifi.ConfigureWifiActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.io.BufferedReader
@@ -66,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         setDeviceNameBtn.setOnClickListener { showSetDeviceNameDialog() }
         setAutoTimeOff.setOnClickListener { showSetAutoTimeOff() }
         btSendKeyboardEvents.setOnClickListener { executeKeyEvent(KeyEvent.KEYCODE_HOME, true) }
+        btConfigureWifi.setOnClickListener { showConfigureWifiScreen() }
 
     }
 
@@ -106,6 +108,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+    }
+
+
+    private fun showConfigureWifiScreen() {
+        val intent = Intent(this, ConfigureWifiActivity::class.java)
+        startActivity(intent)
     }
 
 
