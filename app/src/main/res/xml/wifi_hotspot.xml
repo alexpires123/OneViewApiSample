@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:title="OFF"
+        android:key="turn_on_off"
+        android:persistent="true" />
+
+    <Preference
+        android:title="Hostpot name"
+        android:summary="Edit settings"
+        android:key="edit_settings">
+        <!--
+        <intent android:targetPackage="com.android.tv.settings" android:targetClass="com.android.tv.settings.connectivity.ConfigHotsPotActivity" />
+        -->
+    </Preference>
+
+</PreferenceScreen>

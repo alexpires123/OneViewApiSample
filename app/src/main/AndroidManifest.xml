@@ -53,6 +53,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".wifi.ConfigureWifiActivity" />
+        <activity android:name=".hotspot.SettingsHotspotActivity" />
+        <activity android:name=".hotspot.ConfigSettingsHotspotActivity" />
     </application>
 
 </manifest>
