@@ -1,24 +1,19 @@
 package com.example.oneviewapisample
 
+import android.annotation.SuppressLint
 import android.app.ActivityManager
 import android.app.AlarmManager
 import android.app.AlertDialog
 import android.app.PendingIntent
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
-import android.content.pm.ApplicationInfo
-import android.content.pm.IPackageDataObserver
-import android.content.pm.PackageInstaller
-import android.content.pm.PackageManager
-import android.content.res.Resources
-import android.content.res.Resources.NotFoundException
-import android.hardware.display.DisplayManager
+import android.content.*
+import android.content.pm.*
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.PatternMatcher
 import android.provider.Settings
 import android.text.InputType
+import android.text.TextUtils
 import android.util.Log
 import android.view.KeyEvent
 import android.view.Menu
@@ -26,6 +21,7 @@ import android.view.MenuItem
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.example.oneviewapisample.changedefault.ChangeDefaultAppActivity
 import com.example.oneviewapisample.hotspot.SettingsHotspotActivity
 import com.example.oneviewapisample.wifi.ConfigureWifiActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -70,6 +66,7 @@ class MainActivity : AppCompatActivity() {
         btSendKeyboardEvents.setOnClickListener { executeKeyEvent(KeyEvent.KEYCODE_HOME, true) }
         btConfigureWifi.setOnClickListener { showConfigureWifiScreen() }
         btConfigureHotspot.setOnClickListener { showHotspotConfiguration() }
+        btSetDefaultApp.setOnClickListener { showSetDefaultAppSection() }
 
     }
 
@@ -123,6 +120,14 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SettingsHotspotActivity::class.java)
         startActivity(intent)
     }
+
+
+
+    private fun showSetDefaultAppSection() {
+        val intent = Intent(this, ChangeDefaultAppActivity::class.java)
+        startActivity(intent)
+    }
+
 
 
     /**

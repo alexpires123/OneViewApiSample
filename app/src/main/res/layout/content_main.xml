@@ -115,6 +115,25 @@
             />
 
 
+        <Button
+            android:id="@+id/btConfigureHotspot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configure Hotspot"
+            android:focusable="true"
+            />
+
+
+        <Button
+            android:id="@+id/btSetDefaultApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set default Application"
+            android:focusable="true"
+            />
+
+
+
     </LinearLayout>
 
 
